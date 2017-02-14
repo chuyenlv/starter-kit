@@ -1,0 +1,37 @@
+# Ignore configuration files that may contain sensitive information.
+docroot/sites/*/*settings*.php
+docroot/sites/*/services.yml
+docroot/sites/*
+
+# Ignore paths that contain generated content.
+files/
+docroot/sites/*/files
+docroot/sites/*/private
+
+# Ignore default text files
+robots.txt
+
+# Ignore everything but the "sites" folder ( for non core developer )
+.htaccess
+.idea
+docroot/.gitattributes
+docroot/includes
+docroot/libraries
+docroot/misc
+docroot/profiles
+docroot/modules/*
+!docroot/modules/custom
+docroot/themes/*
+docroot/themes/custom/*/css/styles.css.map
+!docroot/themes/custom
+vendor
+docroot/.eslintrc.json
+docroot/.csslintrc
+docroot/.editorconfig
+docroot/.eslintignore
+docroot/.eslintrc
+docroot/autoload.php
+docroot/core/
+docroot/index.php
+docroot/update.php
+docroot/web.config
