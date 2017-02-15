@@ -1,0 +1,60 @@
+{
+    "name": "chuyenlv/drupal7",
+    "type": "project",
+    "license": "proprietary",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/7"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0",
+        "derhasi/composer-preserve-paths": "0.1.*",
+        "drupal/drupal": "7.*",
+        "drupal/ctools": "^1.12"
+    },
+    "conflict": {
+        "drupal/core": "8.*"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "rm README.md LICENSE .travis.yml phpunit.xml.dist"
+        ]
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "installer-paths": {
+            "docroot/": [
+                "type:drupal-core"
+            ],
+            "docroot/sites/all/modules/contrib/{$name}/": [
+                "type:drupal-module"
+            ],
+            "docroot/sites/all/themes/contrib/{$name}/": [
+                "type:drupal-theme"
+            ],
+            "docroot/sites/all/libraries/{$name}/": [
+                "type:drupal-library"
+            ],
+            "docroot/sites/all/drush/{$name}/": [
+                "type:drupal-drush"
+            ],
+            "docroot/profiles/{$name}/": [
+                "type:drupal-profile"
+            ]
+        },
+        "preserve-paths": [
+            "docroot/sites/all/modules/contrib",
+            "docroot/sites/all/themes/contrib",
+            "docroot/sites/all/libraries",
+            "docroot/sites/all/drush",
+            "docroot/sites/default/settings.php",
+            "docroot/sites/default/files"
+        ]
+    }
+}
