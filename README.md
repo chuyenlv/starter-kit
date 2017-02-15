@@ -1,6 +1,9 @@
 # Drupal 8 - Starter kit
 
-# Install
+## Requirements
+- [Composer](https://getcomposer.org/download/)
+
+## Install
 - Build repo in local.
   `composer install --no-dev -o`
 - Add package to repo (drupal contrib, php libraries, ...).
