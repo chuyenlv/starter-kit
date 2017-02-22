@@ -1,0 +1,20 @@
+# Application
+docroot/app/plugins/*
+!docroot/app/plugins/.gitkeep
+docroot/app/mu-plugins/*/
+docroot/app/upgrade
+docroot/app/uploads/*
+!docroot/app/uploads/.gitkeep
+
+# WordPress
+docroot/wp
+docroot/.htaccess
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+vendor/*
+!vendor/.gitkeep
