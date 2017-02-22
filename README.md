@@ -16,8 +16,10 @@
   * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
   * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
 
-2. Add theme(s) in `docroot/app/themes` as you would for a normal WordPress site.
+2. `composer install`
 
-3. Set your site vhost document root to `/path/to/site/docroot/`
+3. Add theme(s) in `docroot/app/themes` as you would for a normal WordPress site.
 
-4. Access WP admin at `http://example.com/wp/wp-admin`
+4. Set your site vhost document root to `/path/to/site/docroot/`
+
+5. Access WP admin at `http://example.com/wp/wp-admin`
