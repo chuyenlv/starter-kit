@@ -1,0 +1,10 @@
+steps:
+  - name: Composer Install
+    plugin: Shell
+    command: 'cd $SRC_DIR; composer self-update 1.2.2; composer install --no-dev --prefer-dist -o'
+  - name: Provision Drupal
+    plugin: Drupal
+    runInstall: standard
+    installArgs: "--site-name='Drupal 7 CI' --account-pass=admin!@#"
+    subDirectory: docroot
+    drupalVersion: 7
