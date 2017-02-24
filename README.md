@@ -2,6 +2,7 @@
 
 ## Requirements
 - [Composer](https://getcomposer.org/download/)
+- PHP 5.6
 
 ## Install
 - Build repo in local.
