@@ -1,0 +1,25 @@
+assets:
+  - db.sql.gz
+steps:
+  - name: Composer Install
+    plugin: Shell
+    command: 'cd $SRC_DIR; composer self-update 1.2.2; composer install --prefer-dist -o'
+  - name: Import start DB
+    plugin: Drupal
+    database: dev.sql.gz
+    databaseGzipped: true
+    databaseUpdates: true
+    subDirectory: docroot
+    drupalVersion: 8
+  - name: Import Config
+    plugin: Script
+    script:
+      - cd $SRC_DIR/docroot
+      - drush cim dev -y
+  - name: Run update and clear cache
+    plugin: Script
+    script:
+      - cd $SRC_DIR/docroot
+      - drush entup -y
+      - drush up -y
+      - drush cr
