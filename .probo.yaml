@@ -1,5 +1,5 @@
 assets:
-  - db.sql.tar.gz
+  - db.sql.gz
 steps:
   - name: Composer Install
     plugin: Shell
