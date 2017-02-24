@@ -4,6 +4,7 @@ steps:
   - name: Upgrade to php 5.6
     plugin: Script
     script:
+      - apt-get update
       - apt-get install software-properties-common -y
       - add-apt-repository ppa:ondrej/php5-5.6
       - sudo apt-get install php5
