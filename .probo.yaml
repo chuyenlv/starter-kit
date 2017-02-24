@@ -6,7 +6,7 @@ steps:
     command: 'cd $SRC_DIR; composer self-update 1.2.2; composer install --prefer-dist -o'
   - name: Import start DB
     plugin: Drupal
-    database: dev.sql.gz
+    database: db.sql.gz
     databaseGzipped: true
     databaseUpdates: true
     subDirectory: docroot
