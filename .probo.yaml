@@ -3,7 +3,7 @@ assets:
 steps:
   - name: Composer Install
     plugin: Shell
-    command: 'cd $SRC_DIR; composer self-update 1.2.2; composer install --prefer-dist -o'
+    command: 'cd $SRC_DIR; composer self-update; composer install --prefer-dist -o'
   - name: Import start DB
     plugin: Drupal
     database: db.sql.gz
