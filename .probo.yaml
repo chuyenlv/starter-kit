@@ -6,6 +6,7 @@ steps:
     command: |
       cd $SRC_DIR
       composer self-update
+      composer --version
       composer install --prefer-dist -o
   - name: Import start DB
     plugin: Drupal
