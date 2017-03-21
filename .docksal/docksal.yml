@@ -1,0 +1,6 @@
+version: "2.1"
+
+services:
+  solr:
+    hostname: solr
+    image: docksal/solr:4.x-stable
