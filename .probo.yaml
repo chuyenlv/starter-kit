@@ -37,5 +37,5 @@ steps:
     script:
       - cd $SRC_DIR/docroot
       - drush entup -y
-      - drush up -y
+      - drush updb -y
       - drush cr
